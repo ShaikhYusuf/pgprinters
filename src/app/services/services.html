@@ -1,0 +1,33 @@
+
+<div class="container">
+    <div class="section">
+    <h2 class="section-title fade-in-up">Our Services</h2>
+    <p class="section-subtitle fade-in-up stagger-delay-1">
+        Comprehensive glass bottle printing solutions tailored to your needs
+    </p>
+    
+    <div class="services-grid">
+        <div class="service-detail scale-in stagger-delay-{{i+1}}" 
+            *ngFor="let service of services; let i = index">
+        <div class="service-icon">{{service.icon}}</div>
+        <h3>{{service.title}}</h3>
+        <p>{{service.description}}</p>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery-section">
+        <h3 class="gallery-title fade-in-up">Our Work</h3>
+        <p class="gallery-subtitle fade-in-up stagger-delay-1">
+        Showcasing our finest glass bottle printing projects
+        </p>
+        
+        <div class="gallery-grid">
+        <div class="gallery-item scale-in stagger-delay-{{i+1}}" 
+                *ngFor="let item of galleryItems; let i = index">
+            {{item}}
+        </div>
+        </div>
+    </div>
+    </div>
+</div>

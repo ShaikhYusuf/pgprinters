@@ -1,0 +1,23 @@
+
+  <nav>
+    <div class="container">
+      <div class="nav-container">
+        <div class="logo">Popular Glass Printers</div>
+        <ul class="nav-links" [class.mobile-open]="isMobileMenuOpen">
+          <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
+          <li class="nav-services">
+            <a routerLink="/services" routerLinkActive="active">Services</a>
+            <div class="services-dropdown">
+              <a routerLink="/services" class="dropdown-item">Screen Printing</a>
+              <a routerLink="/services" class="dropdown-item">Spray Coating</a>
+              <a routerLink="/services" class="dropdown-item">Hot Foil Stamping</a>
+              <a routerLink="/services" class="dropdown-item">Etching on Glass Bottles</a>
+            </div>
+          </li>
+          <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        </ul>
+        <button class="mobile-menu" (click)="toggleMobileMenu()">☰</button>
+      </div>
+    </div>
+  </nav>

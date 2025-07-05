@@ -1,0 +1,9 @@
+
+  <div class="services-dropdown" 
+        [class.show]="isVisible">
+    <a *ngFor="let service of services" 
+        (click)="navigateToService(service.id)"
+        class="dropdown-item">
+      {{service.name}}
+    </a>
+  </div>

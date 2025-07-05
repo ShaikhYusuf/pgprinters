@@ -1,0 +1,29 @@
+
+<div class="hero">
+    <div class="container">
+    <h1 class="fade-in-up">Premium Glass Bottle Printing</h1>
+    <p class="fade-in-up stagger-delay-1">
+        Transform your glass bottles with precision printing, coating, and etching services. 
+        Quality craftsmanship meets modern technology.
+    </p>
+    <div class="cta-buttons fade-in-up stagger-delay-2">
+        <a routerLink="/services" class="btn-primary">View Services</a>
+        <a routerLink="/contact" class="btn-secondary">Get Quote</a>
+    </div>
+    </div>
+</div>
+
+<div class="container section">
+    <h2 class="section-title fade-in-up">Why Choose Popular Glass Printers</h2>
+    <p class="section-subtitle fade-in-up stagger-delay-1">
+    Industry-leading techniques and attention to detail for exceptional results
+    </p>
+    
+    <div class="services-preview">
+    <div class="service-card scale-in stagger-delay-1" *ngFor="let service of services; let i = index">
+        <div class="service-icon">{{service.icon}}</div>
+        <h3>{{service.title}}</h3>
+        <p>{{service.description}}</p>
+    </div>
+    </div>
+</div>

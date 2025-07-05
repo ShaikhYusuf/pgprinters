@@ -1,0 +1,80 @@
+<div class="container">
+      <div class="section">
+        <h2 class="section-title fade-in-up">Get In Touch</h2>
+        <p class="section-subtitle fade-in-up stagger-delay-1">
+          Ready to discuss your glass bottle printing project?
+        </p>
+        
+        <div class="contact-container">
+          <div class="contact-form fade-in-left">
+            <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  [(ngModel)]="formData.name"
+                  required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  [(ngModel)]="formData.email"
+                  required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  [(ngModel)]="formData.phone">
+              </div>
+              
+              <div class="form-group">
+                <label for="service">Service Interested In</label>
+                <select 
+                  id="service" 
+                  name="service"
+                  [(ngModel)]="formData.service">
+                  <option value="">Select a service</option>
+                  <option value="screen-printing">Screen Printing</option>
+                  <option value="spray-coating">Spray Coating</option>
+                  <option value="hot-foil-stamping">Hot Foil Stamping</option>
+                  <option value="glass-etching">Glass Etching</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="5" 
+                  [(ngModel)]="formData.message"
+                  placeholder="Tell us about your project..."></textarea>
+              </div>
+              
+              <button type="submit" class="btn-primary" [disabled]="!contactForm.valid">
+                Send Message
+              </button>
+            </form>
+          </div>
+          
+          <div class="contact-info fade-in-right">
+            <h3>Contact Information</h3>
+            
+            <div class="contact-item" *ngFor="let item of contactInfo">
+              <h4>{{item.title}}</h4>
+              <p [innerHTML]="item.content"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

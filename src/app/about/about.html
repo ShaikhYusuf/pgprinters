@@ -1,0 +1,37 @@
+
+<div class="container">
+    <div class="section">
+    <h2 class="section-title fade-in-up">About Popular Glass Printers</h2>
+    <p class="section-subtitle fade-in-up stagger-delay-1">
+        Crafting excellence in glass bottle printing since our inception
+    </p>
+    
+    <div class="about-content">
+        <div class="about-text fade-in-left">
+        <h3>Our Story</h3>
+        <p>
+            Popular Glass Printers has established itself as a trusted name in the glass bottle printing industry. 
+            We combine traditional craftsmanship with cutting-edge technology to deliver exceptional results for our clients.
+        </p>
+        <p>
+            Our commitment to quality and precision has made us the preferred choice for businesses seeking premium 
+            glass bottle printing solutions. From small custom orders to large-scale production runs, we maintain 
+            the same level of excellence in every project.
+        </p>
+        
+        <div class="locations">
+            <div class="location-item" *ngFor="let location of locations">
+            <h4>{{location.city}}</h4>
+            <p>{{location.description}}</p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="about-image fade-in-right">
+        <div class="image-placeholder">
+            Company Image Placeholder
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
